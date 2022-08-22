@@ -54,6 +54,9 @@
         .card-registration .select-arrow {
         top: 13px;
         }
+        .hero {
+            height: auto;
+        }
     </style>
 
 </head>
@@ -70,7 +73,7 @@
 
         </div>
     </header><!-- End Header -->
-    <section id="hero" class="align-items-center">
+    <section id="hero" class="hero align-items-center">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-lg-9 col-xl-7">
@@ -82,14 +85,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="f_name" class="form-control form-control-lg" name="f_name" default/>
+                                            <input type="text" id="f_name" class="form-control form-control-lg" name="f_name" required/>
                                             <label class="form-label" for="f_name">First Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-4">
     
                                         <div class="form-outline">
-                                            <input type="text" id="l_name" class="form-control form-control-lg" name="l_name"/>
+                                            <input type="text" id="l_name" class="form-control form-control-lg" name="l_name" required/>
                                             <label class="form-label" for="l_name">Last Name</label>
                                         </div>
     
@@ -99,7 +102,7 @@
                                     <div class="col-md-6 mb-4 d-flex align-items-center">
     
                                         <div class="form-outline datepicker w-100">
-                                            <input type="date" class="form-control form-control-lg" id="DOB" min="1900-01-01" max="2022-12-31" name="DOB"/>
+                                            <input type="date" class="form-control form-control-lg" id="DOB" min="1900-01-01" max="2022-12-31" name="DOB" required/>
                                             <label for="DOB" class="form-label">DOB</label>
                                         </div>
     
@@ -107,7 +110,7 @@
                                     <div class="col-md-6 mb-4">
     
                                         <div class="form-outline">
-                                            <input type="text" id="gender" class="form-control form-control-lg" name="gender"/>
+                                            <input type="text" id="gender" class="form-control form-control-lg" name="gender" required/>
                                             <label class="form-label" for="gender">Gender</label>
                                         </div>
     
@@ -118,7 +121,7 @@
                                     <div class="col-md-6 mb-4 pb-2">
     
                                         <div class="form-outline">
-                                            <input type="email" id="email" class="form-control form-control-lg" name="email"/>
+                                            <input type="email" id="email" class="form-control form-control-lg" name="email" required/>
                                             <label class="form-label" for="email">Email</label>
                                         </div>
     
@@ -126,7 +129,7 @@
                                     <div class="col-md-6 mb-4 pb-2">
     
                                         <div class="form-outline">
-                                            <input type="tel" id="phn" class="form-control form-control-lg" name="phn"/>
+                                            <input type="tel" id="phn" class="form-control form-control-lg" name="phn" required/>
                                             <label class="form-label" for="phn">Phone Number</label>
                                         </div>
     
@@ -136,7 +139,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-outline">
-                                            <input type="text" id="education" class="form-control form-control-lg" name="education"/>
+                                            <input type="text" id="education" class="form-control form-control-lg" name="education" required/>
                                             <label class="form-label" for="education">Education</label>
                                         </div>
                                     </div>
@@ -144,7 +147,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-outline">
-                                            <input type="text" id="address" class="form-control form-control-lg" name="address"/>
+                                            <input type="text" id="address" class="form-control form-control-lg" name="address" required/>
                                             <label class="form-label" for="address">Address</label>
                                         </div>
                                     </div>
@@ -152,7 +155,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-outline">
-                                            <input type="text" id="medical" class="form-control form-control-lg" name="medical"/>
+                                            <input type="text" id="medical" class="form-control form-control-lg" name="medical" required/>
                                             <label class="form-label" for="medical">Medical History</label>
                                         </div>
                                     </div>
@@ -160,7 +163,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-outline">
-                                            <input type="text" id="medications" class="form-control form-control-lg" name="medications"/>
+                                            <input type="text" id="medications" class="form-control form-control-lg" name="medications" required/>
                                             <label class="form-label" for="medications">Medications</label>
                                         </div>
                                     </div>
@@ -224,11 +227,6 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="copyright">
-                Work by Akshat Ansh Nayak
-            </div>
-        </div>
     </footer><!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

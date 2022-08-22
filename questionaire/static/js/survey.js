@@ -5,6 +5,7 @@ let ans_count = 0, counter = 0;
 let result = "";
 let order = [];
 let time = [];
+
 document.addEventListener('DOMContentLoaded', function () {
     var startTime = new Date().getTime();
 
@@ -82,26 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 else {
                     if (ans_count == 0) {
                         result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                                                         
        
                     }
@@ -122,26 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 else {
                     if (ans_count == 0) {
                         result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
 
                             
    
@@ -158,26 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count == 0) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                                   
                       
@@ -206,26 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count == 0) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -658,26 +583,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -694,26 +600,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -789,26 +676,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -824,26 +692,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -922,26 +771,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -957,26 +787,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1068,26 +879,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1103,26 +895,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1175,26 +948,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (n == 10) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                 }
                 else {
@@ -1209,26 +963,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -1270,26 +1005,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1305,26 +1021,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1377,26 +1074,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (o == 9) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -1413,26 +1091,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -1453,26 +1112,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -1500,26 +1140,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1535,26 +1156,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1607,26 +1209,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (p == 8) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -1643,26 +1226,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -1684,26 +1248,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -1711,26 +1256,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (p == 12) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1743,52 +1269,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (p == 13) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -1809,26 +1297,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1844,26 +1313,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -1916,26 +1366,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (q == 7) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -1952,26 +1383,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -1993,26 +1405,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2020,26 +1413,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (q == 11) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -2057,26 +1431,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2090,26 +1445,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                               
                        
@@ -2125,26 +1461,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                               
                        
@@ -2197,26 +1514,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (r == 6) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -2233,26 +1531,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2274,26 +1553,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2301,26 +1561,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (r == 10) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -2333,52 +1574,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (r == 11) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2391,26 +1594,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (ans_count < 5) {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -2463,26 +1647,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (s == 5) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -2499,26 +1664,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2540,26 +1686,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2567,26 +1694,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (s == 9) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -2599,52 +1707,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (s == 10) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2694,26 +1764,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (t == 4) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -2730,26 +1781,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2771,26 +1803,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2798,26 +1811,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (t == 8) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -2830,52 +1824,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (t == 9) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2915,26 +1871,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (u == 3) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -2951,26 +1888,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -2992,26 +1910,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3019,26 +1918,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (u == 7) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -3051,52 +1931,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (u == 8) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3126,26 +1968,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (v == 2) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -3162,26 +1985,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3203,26 +2007,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3230,26 +2015,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (v == 6) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -3262,52 +2028,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (v == 7) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3337,26 +2065,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (w == 2) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -3373,26 +2082,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3404,26 +2094,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3431,26 +2102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (w == 5) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -3463,52 +2115,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (v == 6) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3518,26 +2132,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (x == 0) {
                 if (answer == "no") {
                     result = 'Not diagnosed with Major Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                             
                       
@@ -3560,26 +2155,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (x == 2) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -3596,26 +2172,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3627,26 +2184,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3654,52 +2192,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (x == 5) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3719,26 +2219,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (y == 1) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -3755,26 +2236,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3786,26 +2248,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3813,52 +2256,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (y == 4) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3868,26 +2273,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (z == 0) {
                 if (answer == "yes") {
                     result = 'Diagnose: Depressive Disorder Due to AMC!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                     
                            
                       
@@ -3904,26 +2290,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -3935,26 +2302,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
 
@@ -3965,52 +2313,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (z == 3) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -4024,26 +2334,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -4055,26 +2346,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -4082,52 +2354,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (aa == 2) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -4141,26 +2375,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -4168,52 +2383,14 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (bb == 1) {
                 if (answer == "yes") {
                     result = 'Diagnose: Substance-Induced Depressive Disorder!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                            
                       
                 }
                 else {
                     result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                 }
@@ -4227,26 +2404,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             else {
                 result = 'Diagnose: CURRENT MAJOR DEPRESSIVE EPISODE!!!';
-             const formData = new FormData();
-
-                //console.log(name);
-                formData.append('result', result);
-                formData.append('answer', answer);
-                formData.append('email', email);
-                formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
-                console.log(formData);
-                fetch('{% url "questionaire" %}', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+             
                 
                                                   
                  
