@@ -6,6 +6,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("consent", views.consent, name="consent"),
     path("register", views.register, name="register"),
-    path("questionaire", views.questionaire, name="questionaire")
+    path("questionaire", views.questionaire, name="questionaire"),
+    path("demo", views.demo, name="demo"),
 ]
 urlpatterns += staticfiles_urlpatterns()

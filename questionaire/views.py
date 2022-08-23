@@ -50,3 +50,6 @@ def questionaire(request):
         x.time = time
         x.save()
     return render(request, "questionaire/index.html")
+
+def demo(request):
+    return render(request, "questionaire/test.html", {"question": "In the past month, since (ONE MONTH AGO), has there been a period of time when you were feeling depressed or down most of the day, nearly every day? (Has anyone said that you look sad, down, or depressed?)", "email": "aksha@fjf.c"})
