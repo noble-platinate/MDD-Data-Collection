@@ -1,0 +1,192 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Depression Screening Test</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: OnePage - v4.8.1
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="..">IIT Kharagpur</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="getstarted scrollto" href="../login">Exit test</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body" style="font-size: 1.5rem">
+                <form action='../q3/{{auth_token}}' method='post' onsubmit='func1()'>
+                    {% csrf_token %}
+                    <input name="time" class="form-check-input" type="hidden" value="" id="time">
+                    <div class="container" style="padding-top: 1rem;">
+                        <div id="+" style="display: none">
+                            During that time, did you have less interest or pleasure in things you usually enjoyed?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="yess" value="yes" required>
+                                <label class="form-check-label" for="yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="noo" value="no" required>
+                                <label class="form-check-label" for="no">
+                                    No
+                                </label>
+                            </div>
+                            <br>
+                            What has that been like?
+                            <div class="form-group">
+                                <input type="text" id="answerr" class="form-control form-control-lg" name="answer" disabled />
+                            </div>
+                        </div>
+                        
+                        <div id="-" style="display: none">
+                            Did you lose interest or pleasure in things you usually enjoyed?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="yes" value="yes" required>
+                                <label class="form-check-label" for="yes">
+                                    Yes
+                                </label>
+                            </div>
+                        
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="no" value="no" required>
+                                <label class="form-check-label" for="no">
+                                    No
+                                </label>
+                            </div>
+                            <br>
+                            What has that been like?
+                            <div class="form-group">
+                                <input type="text" id="answer" class="form-control form-control-lg" name="answer" disabled />
+                            </div>
+                        </div>
+
+                        <br>
+                        Has it lasted more than 2 weeks for nearly everyday?
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lasted" id="yes_lasted" value="yes" disabled
+                                required>
+                            <label class="form-check-label" for="yes">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lasted" id="no_lasted" value="no" disabled
+                                required>
+                            <label class="form-check-label" for="no">
+                                No
+                            </label>
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" id="myBtn" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script>
+        let variable = "{{ result }}";
+        if(variable == "1")
+        {
+            document.getElementById("+").style.display = "inline"
+            if (document.getElementById("yess").checked)
+            {
+                document.getElementById("answerr").disabled = false;
+                document.getElementById("yes_lasted").disabled = false;
+                document.getElementById("no_lasted").disabled = false;
+            }
+        }
+        if (variable == "0")
+        {
+            if (document.getElementById("yes").checked) {
+                document.getElementById("answer").disabled = false;
+                document.getElementById("yes_lasted").disabled = false;
+                document.getElementById("no_lasted").disabled = false;
+            }
+            document.getElementById("-").style.display = "inline"
+        }
+        let startTime = new Date().getTime();
+
+        function func1() {
+            let endTime = new Date().getTime();
+            let totalTime = (endTime - startTime) / 1000;
+            document.getElementById("time").value = totalTime
+        }
+    </script>
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

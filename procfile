@@ -1,1 +1,0 @@
-web: gunicorn depression.wgsi --log-file -

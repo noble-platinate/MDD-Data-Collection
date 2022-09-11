@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <title>Depression Screening Test</title>
     <meta content="" name="description">
-
     <meta content="" name="keywords">
 
     <!-- Favicons -->
@@ -17,125 +17,129 @@
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <script>
+        function func() {
+            if (document.getElementById('consent').checked) {
+                document.getElementById("myBtn").disabled = false;
+            }
+            else {
+                document.getElementById("myBtn").disabled = true;
+            }
+        }
+    </script>
+
+    <!-- =======================================================
+  * Template Name: OnePage - v4.8.1
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
 
     <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
 
-            <nav id="navbar" class="navbar">
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-
+            <h1 class="logo"><a href="..">IIT Kharagpur</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
         </div>
     </header><!-- End Header -->
-    <section id="hero" class="hero d-flex align-items-center">
-        <div class="card" style="width: 70rem; margin: auto;">
-            <div class="card-body">
-            <h2 style="text-align: center">Consent Form</h2>
-            <div>This is an experiment on human visual problem solving. We are trying to study how individuals look at different kinds of
-            problems and solve them. We are also exploring whether past knowledge has any impact on the way one looks at tasks.</div>
-            <div>Name of Institution: IIT Kharagpur</div>
-            <div>======================================================================</div>
-            <div>Documentation of the Informed Consent:
-            
-            I, have read the information in this form (or it has been read to me). I was free to ask any questions and they have
-            been answered.
 
-            I am years old and exercising my free power of choice, hereby give my consent to be included as a participant in “Visual
-            Representation of Problem-Solving Behaviour.”</div>
-            <div>
-                <ol>
-                    <li>I have read and understood this consent form and the information provided to me.</li>
-            <li>I have had the consent document explained to me.</li>
-            <li>I have been explained about the nature of study.</li>
-            <li>My rights and responsibilities have been explained to me by the investigator.</li>
-            <li>I agree to cooperate with the investigator and I will inform him/her immediately if I suffer unusual symptoms.</li>
-            <li>I am also aware that the investigators may terminate my participation in the study at any time, for any reason,
-            without my consent.</li>
-            <li>I hereby, give permission to the investigators to release the information obtained from me as a result of
-            participation in this study to the sponsors, regulatory authorities, Government agencies, and ethics committee.
-            I understand that they may inspect my original records.</li>
-            <li>My identity will be kept confidential if my data are publicly presented.</li>
-            <li>I have had my questions answered to my satisfaction.</li>
-            <li>I have decided to be a part of the research study.</li>
-                </ol>
-            </div>
-           
-            <form>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="card" style="width: 60rem; margin: auto;" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+                <h2>Consent Form</h2>
+                <div>This is an experiment on human visual problem solving. We are trying to study how individuals look at different
+                    kinds of
+                    problems and solve them. We are also exploring whether past knowledge has any impact on the way one looks at tasks.
+                </div>
+                <div>Name of Institution: IIT Kharagpur</div>
+                <div>======================================================================</div>
+                <div>Documentation of the Informed Consent:
+                
+                    I, have read the information in this form (or it has been read to me). I was free to ask any questions and they have
+                    been answered.
+                
+                    I am years old and exercising my free power of choice, hereby give my consent to be included as a participant in
+                    “Visual
+                    Representation of Problem-Solving Behaviour.”</div>
+                <div>
+                    <ol>
+                        <li>I have read and understood this consent form and the information provided to me.</li>
+                        <li>I have had the consent document explained to me.</li>
+                        <li>I have been explained about the nature of study.</li>
+                        <li>My rights and responsibilities have been explained to me by the investigator.</li>
+                        <li>I agree to cooperate with the investigator and I will inform him/her immediately if I suffer unusual
+                            symptoms.</li>
+                        <li>I am also aware that the investigators may terminate my participation in the study at any time, for any
+                            reason,
+                            without my consent.</li>
+                        <li>I hereby, give permission to the investigators to release the information obtained from me as a result of
+                            participation in this study to the sponsors, regulatory authorities, Government agencies, and ethics
+                            committee.
+                            I understand that they may inspect my original records.</li>
+                        <li>My identity will be kept confidential if my data are publicly presented.</li>
+                        <li>I have had my questions answered to my satisfaction.</li>
+                        <li>I have decided to be a part of the research study.</li>
+                    </ol>
+                </div>
+
                 <!-- Name input -->
                 <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                    <input class="form-check-input me-2" type="checkbox" value="consent" id="consent" checked/>
-                    <label class="form-check-label" for="form4Example4">
-                        By signing this consent form, I attest that the information given in this document and the consent form has been clearly
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="consent" onclick="func()">
+                    <label class="form-check-label" for="consent">
+                        By signing this consent form, I attest that the information given in this document and the consent form has
+                        been clearly
                         explained to me and apparently understood by me. I will be given a copy of this consent document.
                     </label>
                 </div>
-            
+                <br>
                 <!-- Submit button -->
-                <div class="text-center text-lg-start">
-                  <a href="register" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                    <span>Register</span>
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
+                <div>
+                    <button id="myBtn" onclick="func1()" class="btn btn-primary" disabled>Proceed</button>
                 </div>
-            </form>
             </div>
         </div>
-    </section>
-    
+    </section><!-- End Hero -->
+
+    <main id="main">
+
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row gy-4">
 
-                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                        <h4>Contact Us</h4>
-                        <p>
-                            Indian Institute of Technology Kharagpur<br>
-                            Kharagpur, West Bengal 721302<br>
-                            India<br><br>
-                            <strong>Phone:</strong> +91 8597986876<br>
-                            <strong>Email:</strong> akshatansh.nayak@gmail.com<br>
-                        </p>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="copyright">
-                Work by Akshat Ansh Nayak
-            </div>
-        </div>
-    </footer><!-- End Footer -->
-
+    <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
+    <script>
+        let auth_token = "{{ auth_token }}";
+        function func1() {
+            window.location.href = `../test/${auth_token}`;
+        }
+    </script>
     <!-- Vendor JS Files -->
-    <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
     <script src="{% static 'vendor/aos/aos.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
