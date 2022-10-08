@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Depression Screening Test</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: OnePage - v4.8.1
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <script>
+        function func() {
+            if (document.getElementById('flexCheckDefault').checked) {
+                document.getElementById("yes").disabled = false;
+                document.getElementById("no").disabled = false;
+            }
+            else {
+                document.getElementById("no").disabled = true;
+                document.getElementById("yes").disabled = true;
+            }
+        }
+        function func2() {
+                if (document.getElementById('yes').checked) {
+                    document.getElementById("answer").disabled = false;
+                    document.getElementById("yess").disabled = false;
+                    document.getElementById("noo").disabled = false;
+                    document.getElementById("yesss").disabled = false;
+                    document.getElementById("nooo").disabled = false;
+                    document.getElementById("noooo").disabled = false;
+                    document.getElementById("yessss").disabled = false;
+                }
+                else {
+                    document.getElementById("answer").disabled = true;
+                    document.getElementById("noo").disabled = true;
+                    document.getElementById("yess").disabled = true; 
+                    document.getElementById("nooo").disabled = true;
+                    document.getElementById("yesss").disabled = true;
+                    document.getElementById("noooo").disabled = true;
+                    document.getElementById("yessss").disabled = true;
+                }
+            }
+    </script>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="..">IIT Kharagpur</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="getstarted scrollto" href="../login">Exit test</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body" style="font-size: 1.5rem">
+                <form action='../q8/{{auth_token}}' method='post' onsubmit='func1()'>
+                    {% csrf_token %}
+                    <input name="time" class="form-check-input" type="hidden" value="" id="time">
+                    <div class="container" style="padding-top: 1rem;">
+                        Have you had any of these thoughts?
+                        <ol>
+                            <li>
+                                Have things been so bad that you thought a lot about death or that you would be better off dead?
+                            </li>
+                            <div style="font-weight: bold;">or</div>
+                            <li>
+                                Have you thought about taking your own life?
+                            </li>
+                            <div style="font-weight: bold;">or</div>
+                        </ol>
+                        <div class="text-center">
+                            <input onclick="func()" name="any" class="form-check-input" type="checkbox" value="yes"
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" style="font-weight: bold;">
+                                Check if any of the above is true for you.
+                            </label>
+                        </div>
+                        <br>
+                        Have you done something about it?
+                        <div class="form-check">
+                            <input onclick="func2()" class="form-check-input" type="radio" name="done" id="yes" value="yes" disabled
+                                required>
+                            <label class="form-check-label" for="yes">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input onclick="func2()" class="form-check-input" type="radio" name="done" id="no" value="no" disabled
+                                required>
+                            <label class="form-check-label" for="no">
+                                No
+                            </label>
+                        </div>
+                        <br>
+                        What have you done?
+                        <div class="form-group">
+                            <input type="text" id="answer" class="form-control form-control-lg" name="answer" disabled />
+                        </div>
+                        <br>
+                        Have you made a specific plan?
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="plan" id="yess" value="yes" disabled
+                                required>
+                            <label class="form-check-label" for="yess">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="plan" id="noo" value="no" disabled
+                                required>
+                            <label class="form-check-label" for="noo">
+                                No
+                            </label>
+                        </div>
+                        <br>
+                        Have you taken any action to prepare for it?
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="action" id="yesss" value="yes" disabled required>
+                            <label class="form-check-label" for="yesss">
+                                Yes
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="action" id="nooo" value="no" disabled required>
+                            <label class="form-check-label" for="nooo">
+                                No
+                            </label>
+                        </div>
+                        <br>
+                        Have you actually made a suicide attempt?
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="attempt" id="yessss" value="yes" disabled required>
+                            <label class="form-check-label" for="yessss">
+                                Yes
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="attempt" id="noooo" value="no" disabled required>
+                            <label class="form-check-label" for="noooo">
+                                No
+                            </label>
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" id="myBtn" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script>
+        let startTime = new Date().getTime();
+
+        function func1() {
+            let endTime = new Date().getTime();
+            let totalTime = (endTime - startTime) / 1000;
+            document.getElementById("time").value = totalTime
+        }
+    </script>
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
