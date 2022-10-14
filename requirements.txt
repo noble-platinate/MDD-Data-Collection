@@ -100,6 +100,7 @@ nest-asyncio==1.5.5
 notebook==6.4.0
 npm==0.1.1
 numba==0.54.1
+numpy==1.19.5
 oauthlib==3.1.1
 opencv-contrib-python==4.5.1.48
 opencv-python==4.5.1.48

@@ -247,13 +247,17 @@ def q3(request,auth_token):
                     else:
                         x.q_2_lasted_minus = False
                         x.q_2_check = False
+                        result = "no current depression"
+                        x.result = "no current depression"
                         x.save()
-                        return render(request, "questionaire/end.html", {"result": 0, "auth_token": auth_token})
+                        return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
                 else:
                     x.q_2_any_minus = False
                     x.q_2_check = False
+                    result = "no current depression"
+                    x.result = "no current depression"
                     x.save()
-                    return render(request, "questionaire/end.html", {"result": 0, "auth_token": auth_token})
+                    return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
         except:
             return render(request, 'questionaire/forbidden.html')
     return render(request, 'questionaire/forbidden.html')
@@ -563,11 +567,14 @@ def q10(request, auth_token):
             
             l=[x.q_1_check,x.q_2_check,x.q_3_check,x.q_4_check,x.q_5_check,x.q_6_check,x.q_7_check,x.q_8_check,x.q_9_check]
             x.q_count = l.count(True)
-            x.save()
             if(l.count(True)>=5):
-                return render(request, "questionaire/end.html", {"auth_token": auth_token})
+                x.save()
+                return render(request, "questionaire/q10.html", {"auth_token": auth_token})
             else:
-                return render(request, "questionaire/end.html", {"auth_token": auth_token})
+                x.result = "no current depression"
+                result = "no current depression"
+                x.save()
+                return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
 
         except:
             return render(request, 'questionaire/forbidden.html')
@@ -575,10 +582,109 @@ def q10(request, auth_token):
 
 
 def q11(request, auth_token):
-    return render(request, "questionaire/q2.html")
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_10_time = time
+
+            try:
+                any = request.POST["any"]
+                x.q_10_any = True
+                x.q_10_check = True
+
+                x.save()
+
+                return render(request, "questionaire/q11.html", {"auth_token": auth_token})
+            except:
+                x.q_10_any = False
+
+                done = request.POST["done"]
+
+                if(done == "yes"):
+                    x.q_10_other = True
+
+                    x.save()
+                    return render(request, "questionaire/q11.html", {"auth_token": auth_token})
+                else:
+                    x.q_10_other = False
+                    try:
+                        answer = request.POST["answer"]
+                        x.q_10_text = answer
+                    except:
+                        x.q_10_text = ''
+                    x.result = "no current depression"
+                    result = "no current depression"
+                    x.save()
+                    return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
 
 def q12(request, auth_token):
-    return render(request, "questionaire/q2.html")
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_11_time = time
+
+            done = request.POST["done"]
+
+            if(done == "yes"):
+                x.q_11_ill = True
+                try:
+                    answer = request.POST["answer"]
+                    x.q_11_text = answer
+                except:
+                    x.q_11_text = ''
+            else:
+                x.q_11_ill = False
+
+            meds = request.POST["meds"]
+
+            if(meds == "yes"):
+                x.q_11_meds = True
+                change = request.POST["change"]
+
+                if(change == "yes"):
+                    x.q_11_change = True
+                else:
+                    x.q_11_change = False
+            else:
+                x.q_11_meds = False
+
+            drugs = request.POST["drugs"]
+            
+            if(drugs == "yes"):
+                x.q_11_drugs = True
+                result = "Drugs"
+                x.result = "Drugs"
+                x.save()
+                return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
+            else:
+                x.q_11_drugs = False
+            
+            if(x.q_11_meds==True and x.q_11_ill==True):
+                result = "AMC"
+                x.result = "AMC"
+                x.save()
+                return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
+            else:
+                result = "current depression"
+                x.result = "current depression"
+                x.save()
+                return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
 
 def q13(request, auth_token):
     return render(request, "questionaire/q2.html")

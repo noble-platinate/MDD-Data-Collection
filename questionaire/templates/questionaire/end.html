@@ -32,6 +32,7 @@
     <!-- Template Main CSS File -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+
     <!-- =======================================================
   * Template Name: OnePage - v4.8.1
   * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
@@ -49,42 +50,14 @@
             <h1 class="logo"><a href="..">IIT Kharagpur</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
-
         </div>
     </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
-        <div class="card" style="width: 30rem; margin: auto;" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-body">
-                <form action="{% url 'login'%}" method="POST">
-                    {% csrf_token %}
-                    <div class="container text-center" style="padding-top: 1rem;">
-                        <h3>Login</h3>
-                        <div class="form-group" style="margin: 1rem">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control form-control-lg" name="email" required />
-                        </div>
-                        <div class="form-group" style="margin: 1rem">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" class="form-control form-control-lg" name="password"
-                                required />
-                        </div>
-                        <input class="btn btn-primary" type="submit" value="Submit" style="margin: 1rem" />
-                        <div class="sign-up mt-2">
-                            New user? <a href="register">Register</a>
-                        </div>
-                        <div class="sign-up mt-2">
-                            <a href="reset">Forgot password</a>
-                        </div>
-                    </div>
-                </form>
-                <br>
-                {% if message %}
-                <div class="alert alert-info">
-                    {{ message }}
-                </div>
-                {% endif %}
+        <div class="card" style="width: 60rem; margin: auto;" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body text-center" style="font-weight: bold; font-size: 2rem">
+                Results = {{results}}
             </div>
         </div>
     </section><!-- End Hero -->
@@ -99,6 +72,12 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
+    <script>
+        function timeouts() {
+            window.location.href = "..";
+        }
+        setTimeout(timeouts, 3000);
+    </script>
     <!-- Vendor JS Files -->
     <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
     <script src="{% static 'vendor/aos/aos.js' %}"></script>
