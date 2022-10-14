@@ -1,1 +1,1 @@
-web: gunicorn depression_screening_test.wgsi:application --log-file -
+web: gunicorn depression_screening_test.wsgi --log-file -
