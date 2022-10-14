@@ -105,15 +105,15 @@ def q1(request, auth_token):
         return render(request, 'questionaire/forbidden.html')
 
 def send_mail_after_registration(email , token):
-    subject = 'Your accounts need to be verified'
-    message = f'Hi paste the link to verify your account http://127.0.0.1:8000/verify/{token}'
+    subject = 'Your account needs to be verified'
+    message = f'Hey, kindly click on the link to verify your account https://mdd-diagnostic-test.herokuapp.com/verify/{token}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message , email_from ,recipient_list )
 
 def send_mail_for_reset(email, password):
     subject = 'Retrieve password'
-    message = f'Hi, your password is {password}'
+    message = f'Hey, your password is {password}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)
@@ -661,25 +661,25 @@ def q12(request, auth_token):
             else:
                 x.q_11_meds = False
 
-            drugs = request.POST["drugs"]
+            drugs = request.POST["depression due to drugs"]
             
             if(drugs == "yes"):
                 x.q_11_drugs = True
-                result = "Drugs"
-                x.result = "Drugs"
+                result = "depression due to drugs"
+                x.result = "depression due to drugs"
                 x.save()
                 return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
             else:
                 x.q_11_drugs = False
             
             if(x.q_11_meds==True and x.q_11_ill==True):
-                result = "AMC"
-                x.result = "AMC"
+                result = "depression due to a medical condition"
+                x.result = "depression due to a medical condition"
                 x.save()
                 return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
             else:
-                result = "current depression"
-                x.result = "current depression"
+                result = "diagnosed current major depressive episode"
+                x.result = "diagnosed current major depressive episode"
                 x.save()
                 return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
         except:
