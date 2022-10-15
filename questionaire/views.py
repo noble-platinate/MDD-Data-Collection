@@ -517,7 +517,7 @@ def q9(request, auth_token):
 
 def q10(request, auth_token):
     if request.method == "POST":
-        try:
+        if(1):
             x = user_data.objects.get(auth_token=auth_token)
 
             auth_token = str(uuid.uuid4())
@@ -525,11 +525,9 @@ def q10(request, auth_token):
             time = request.POST["time"]
             x.auth_token = auth_token
             x.q_9_time = time
-
-            try:
+            if(1):
                 any = request.POST["any"]
                 x.q_9_any = True
-
                 done = request.POST["done"]
                 if(done == "yes"):
                     x.q_9_done = True
@@ -561,10 +559,9 @@ def q10(request, auth_token):
                     x.q_9_done = False
                 
                 x.q_9_check = True
-            except:
+            else:
                 x.q_9_any = False
                 x.q_9_check = False
-            
             l=[x.q_1_check,x.q_2_check,x.q_3_check,x.q_4_check,x.q_5_check,x.q_6_check,x.q_7_check,x.q_8_check,x.q_9_check]
             x.q_count = l.count(True)
             if(l.count(True)>=5):
@@ -576,7 +573,7 @@ def q10(request, auth_token):
                 x.save()
                 return render(request, "questionaire/end.html", {"auth_token": auth_token, "results": result})
 
-        except:
+        else:
             return render(request, 'questionaire/forbidden.html')
     return render(request, 'questionaire/forbidden.html')
 
@@ -685,6 +682,3 @@ def q12(request, auth_token):
         except:
             return render(request, 'questionaire/forbidden.html')
     return render(request, 'questionaire/forbidden.html')
-
-def q13(request, auth_token):
-    return render(request, "questionaire/q2.html")

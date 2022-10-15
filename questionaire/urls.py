@@ -24,7 +24,6 @@ urlpatterns = [
     path('q10/<auth_token>', views.q10, name="q10"),
     path('q11/<auth_token>', views.q11, name="q11"),
     path('q12/<auth_token>', views.q12, name="q12"),
-    path('q13/<auth_token>', views.q13, name="q13"),
     # path('q14/<auth_token>', views.q14, name="q14"),
     # path('q15/<auth_token>', views.q15, name="q15"),
     # path('q16/<auth_token>', views.q16, name="q16"),

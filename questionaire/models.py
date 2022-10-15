@@ -95,7 +95,7 @@ class user_data(models.Model):
     q_11_time = models.FloatField(default=None, null=True)
     q_11_check = models.BooleanField(default=None, null=True)
 
-    q_count = models.BooleanField(default=None, null=True)
+    q_count = models.BigIntegerField(default=None, null=True)
     results = models.CharField(max_length=200, default=None, null=True)
 
     def __str__(self):
