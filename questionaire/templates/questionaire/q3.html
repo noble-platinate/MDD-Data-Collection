@@ -42,24 +42,10 @@
 
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
-
-            <h1 class="logo"><a href="..">IIT Kharagpur</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="getstarted scrollto" href="../login">Exit test</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-        </div>
-    </header><!-- End Header -->
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
+        <button class="btn btn-primary" style="position: absolute; top: 0; right: 0; margin: 15px" href="../login">Exit
+            test</button>        
         <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body" style="font-size: 1.5rem">
                 <form action='../q4/{{auth_token}}' method='post' onsubmit='func1()'>
