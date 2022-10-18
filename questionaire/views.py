@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .models import user_data
-from django.db.models import Max
 import uuid
 from django.core.mail import send_mail
 from django.conf import settings
