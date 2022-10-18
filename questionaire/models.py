@@ -19,6 +19,8 @@ class user_data(models.Model):
 
     consent = models.BigIntegerField(default=0)
 
+    test_number = models.BigIntegerField(default=0)
+
     date_of_test = models.DateField(default=None, null=True)
 
     q_1_any = models.BooleanField(default=None, null=True)
