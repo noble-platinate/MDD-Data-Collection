@@ -428,11 +428,6 @@ def q8(request, auth_token):
             try:
                 any = request.POST["any"]
                 x.q_7_any = True
-                try:
-                    answer = request.POST["answer"]
-                    x.q_7_text = answer
-                except:
-                    x.q_7_text = ''
 
                 options = request.POST["options"]
                 care = request.POST["care"]

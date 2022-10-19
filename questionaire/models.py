@@ -59,7 +59,6 @@ class user_data(models.Model):
     q_6_time = models.FloatField(default=None, null=True)
 
     q_7_any = models.BooleanField(default=None, null=True)
-    q_7_text = models.CharField(max_length=200, default=None, null=True)
     q_7_lasted = models.BooleanField(default=None, null=True)
     q_7_care = models.BooleanField(default=None, null=True)
     q_7_time = models.FloatField(default=None, null=True)
