@@ -71,8 +71,13 @@
                 <form action='../q12/{{auth_token}}' method='post' onsubmit='func1()'>
                     {% csrf_token %}
                     <input name="time" class="form-check-input" type="hidden" value="" id="time">
+                    When did these symptoms begin?
+                    <div class="form-group">
+                        <input type="text" id="when" class="form-control form-control-lg" name="when" />
+                    </div>
+                    <br>
                     <div class="container" style="padding-top: 1rem;">
-                        Just before this period of depression began, were you physically ill?
+                        Just before this began, were you physically ill?
                         <div class="form-check">
                             <input onclick="func()" class="form-check-input" type="radio" name="done" id="yes"
                                 value="yes" required>

@@ -86,6 +86,7 @@ class user_data(models.Model):
     q_10_time = models.FloatField(default=None, null=True)
     q_10_check = models.BooleanField(default=None, null=True)
 
+    q_11_when = models.CharField(max_length=200, default=None, null=True)
     q_11_ill = models.BooleanField(default=None, null=True)
     q_11_meds = models.BooleanField(default=None, null=True)
     q_11_change = models.BooleanField(default=None, null=True)
@@ -95,7 +96,8 @@ class user_data(models.Model):
     q_11_check = models.BooleanField(default=None, null=True)
 
     q_count = models.BigIntegerField(default=None, null=True)
-    results = models.CharField(max_length=200, default=None, null=True)
+    result_current = models.BooleanField(default=None, null=True)
+    result_past = models.BooleanField(default=None, null=True)
 
     def __str__(self):
         return self.email
