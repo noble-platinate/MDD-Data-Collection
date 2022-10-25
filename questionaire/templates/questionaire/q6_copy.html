@@ -38,7 +38,22 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
+    <script>
+        function func() {
+            if (document.getElementById('flexCheckDefault').checked) {
+                document.getElementById("yes").disabled = false;
+                document.getElementById("no").disabled = false;
+                document.getElementById("yess").disabled = false;
+                document.getElementById("noo").disabled = false;
+            }
+            else {
+                document.getElementById("yes").disabled = true;
+                document.getElementById("no").disabled = true;
+                document.getElementById("yess").disabled = true;
+                document.getElementById("noo").disabled = true;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -49,14 +64,25 @@
             test</a>
         <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body" style="font-size: 1.5rem">
-                <form action='../q13/{{auth_token}}' method='post' onsubmit='func1()'>
+                <form action='../q21/{{auth_token}}' method='post' onsubmit='func1()'>
                     {% csrf_token %}
                     <input name="time" class="form-check-input" type="hidden" value="" id="time">
                     <div class="container" style="padding-top: 1rem;">
-                        When did these symptoms start appearing?
-                        <div class="form-check form-group">
-                            <label for="date">mm/yy</label>
-                            <input type="month" class="form-control" id="date" min="1900-08" max="2025-12-31" name="date" required />
+                        Had you experienced lack of energy all the time, most of the day during this period?
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="options" id="yes" value="yes"
+                                required>
+                            <label class="form-check-label" for="yes">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="options" id="no" value="no"
+                                required>
+                            <label class="form-check-label" for="no">
+                                No
+                            </label>
                         </div>
                         <div class="text-center">
                             <input type="submit" id="myBtn" class="btn btn-primary">

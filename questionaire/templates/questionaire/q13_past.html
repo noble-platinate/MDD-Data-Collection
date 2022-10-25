@@ -49,14 +49,13 @@
             test</a>
         <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body" style="font-size: 1.5rem">
-                <form action='../q13/{{auth_token}}' method='post' onsubmit='func1()'>
+                <form action='../report/{{auth_token}}' method='post' onsubmit='func1()'>
                     {% csrf_token %}
                     <input name="time" class="form-check-input" type="hidden" value="" id="time">
                     <div class="container" style="padding-top: 1rem;">
-                        When did these symptoms start appearing?
-                        <div class="form-check form-group">
-                            <label for="date">mm/yy</label>
-                            <input type="month" class="form-control" id="date" min="1900-08" max="2025-12-31" name="date" required />
+                        How many separate times in your life have you had several of the symptoms that you described nearly everyday for at least 2 weeks?
+                        <div class="form-group">
+                            <input type="text" id="answer" class="form-control form-control-lg" name="answer" disabled />
                         </div>
                         <div class="text-center">
                             <input type="submit" id="myBtn" class="btn btn-primary">

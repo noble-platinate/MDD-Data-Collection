@@ -38,7 +38,22 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
+    <script>
+        function func() {
+            if (document.getElementById('flexCheckDefault').checked) {
+                document.getElementById("sleep1").disabled = false;
+                document.getElementById("sleep2").disabled = false;
+                document.getElementById("yes").disabled = false;
+                document.getElementById("no").disabled = false;
+            }
+            else {
+                document.getElementById("sleep1").disabled = true;
+                document.getElementById("sleep2").disabled = true;
+                document.getElementById("yes").disabled = true;
+                document.getElementById("no").disabled = true;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -49,14 +64,66 @@
             test</a>
         <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body" style="font-size: 1.5rem">
-                <form action='../q13/{{auth_token}}' method='post' onsubmit='func1()'>
+                <form action='../q19/{{auth_token}}' method='post' onsubmit='func1()'>
                     {% csrf_token %}
                     <input name="time" class="form-check-input" type="hidden" value="" id="time">
                     <div class="container" style="padding-top: 1rem;">
-                        When did these symptoms start appearing?
-                        <div class="form-check form-group">
-                            <label for="date">mm/yy</label>
-                            <input type="month" class="form-control" id="date" min="1900-08" max="2025-12-31" name="date" required />
+                        How were you sleeping?
+                        <ul>
+                            <li>
+                                Were you having trouble sleeping?
+                            </li>
+                            <div style="font-weight: bold;">or</div>
+                            <li>
+                                Were you waking up frequently?
+                            </li>
+                            <div style="font-weight: bold;">or</div>
+                            <li>
+                                Were you having trouble staying asleep?
+                            </li>
+                            <div style="font-weight: bold;">or</div>
+                            <li>
+                                Were you waking up too early?
+                            </li>
+                            <div style="font-weight: bold;">or</div>
+                            <li>
+                                Were you sleeping too much?
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <input onclick="func()" name="any" class="form-check-input" type="checkbox" value="yes"
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" style="font-weight: bold;">
+                                Check if any of the above was true for you.
+                            </label>
+                        </div>
+                        <br>
+                        How many hours of sleep (including naps) had you been getting?
+                        <div class="form-group">
+                            <input type="number" id="sleep1" class="form-control form-control-lg" name="sleep1"
+                                disabled required/>
+                        </div>
+                        <br>
+                        How many hours of sleep had you typically get before?
+                        <div class="form-group">
+                            <input type="number" id="sleep2" class="form-control form-control-lg" name="sleep2" disabled required/>
+                        </div>
+                        <br>
+                        Was that nearly every night?
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="options" id="yes" value="yes" disabled
+                                required>
+                            <label class="form-check-label" for="yes">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="options" id="no" value="no" disabled
+                                required>
+                            <label class="form-check-label" for="no">
+                                No
+                            </label>
                         </div>
                         <div class="text-center">
                             <input type="submit" id="myBtn" class="btn btn-primary">

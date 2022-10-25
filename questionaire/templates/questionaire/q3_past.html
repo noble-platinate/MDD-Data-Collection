@@ -38,7 +38,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
 </head>
 
 <body>
@@ -46,17 +45,53 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <a class="btn btn-primary" style="position: absolute; top: 0; right: 0; margin: 15px" href="../login">Exit
-            test</a>
+            test</a>        
         <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body" style="font-size: 1.5rem">
-                <form action='../q13/{{auth_token}}' method='post' onsubmit='func1()'>
+                <form action='../q18/{{auth_token}}' method='post' onsubmit='func1()'>
                     {% csrf_token %}
                     <input name="time" class="form-check-input" type="hidden" value="" id="time">
                     <div class="container" style="padding-top: 1rem;">
-                        When did these symptoms start appearing?
-                        <div class="form-check form-group">
-                            <label for="date">mm/yy</label>
-                            <input type="month" class="form-control" id="date" min="1900-08" max="2025-12-31" name="date" required />
+                        <div>
+                            Had your food intake/body weight changed noticeably in the above mentioned period?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="yes" value="yes"
+                                    onclick="func()" required>
+                                <label class="form-check-label" for="yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="no" value="no"
+                                    onclick="func()" required>
+                                <label class="form-check-label" for="no">
+                                    No
+                                </label>
+                            </div>
+                            <br>
+                            How much weight had you gained/lost? (in Kgs, negative value for loss)
+                            <div class="form-group">
+                                <input type="number" id="answer" class="form-control form-control-lg" name="answer"
+                                    disabled required/>
+                            </div>
+                        </div>
+
+                        <br>
+                        Had you been trying to lose/gain weight?
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lasted" id="yes_lasted" value="yes"
+                                disabled required>
+                            <label class="form-check-label" for="yes_lasted">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lasted" id="no_lasted" value="no"
+                                disabled required>
+                            <label class="form-check-label" for="no_lasted">
+                                No
+                            </label>
                         </div>
                         <div class="text-center">
                             <input type="submit" id="myBtn" class="btn btn-primary">
@@ -85,6 +120,19 @@
             let endTime = new Date().getTime();
             let totalTime = (endTime - startTime) / 1000;
             document.getElementById("time").value = totalTime
+        }
+
+        function func() {
+            if (document.getElementById('yes').checked) {
+                document.getElementById("yes_lasted").disabled = false;
+                document.getElementById("no_lasted").disabled = false;
+                document.getElementById("answer").disabled = false;
+            }
+            else {
+                document.getElementById("answer").disabled = true;
+                document.getElementById("yes_lasted").disabled = true;
+                document.getElementById("no_lasted").disabled = true;
+            }
         }
     </script>
     <!-- Vendor JS Files -->

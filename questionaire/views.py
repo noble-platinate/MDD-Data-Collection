@@ -323,7 +323,7 @@ def q5(request, auth_token):
                 x.q_4_any = True
 
                 x.q_4_current = request.POST["sleep1"]
-                x.q_4_before = request.POST["sleep2"]
+                x.q_4_past = request.POST["sleep2"]
 
                 lasted = request.POST["options"]
 
@@ -615,49 +615,645 @@ def q11(request, auth_token):
 
 def q12(request, auth_token):
     if request.method == "POST":
+        x = user_data.objects.get(auth_token=auth_token)
 
+        auth_token = str(uuid.uuid4())
+
+        time = request.POST["time"]
+        x.auth_token = auth_token
+        x.q_11_time = time
+        
+        when = request.POST["when"]
+        x.q_11_when = when
+        done = request.POST["done"]
+
+        if(done == "yes"):
+            x.q_11_ill = True
+            try:
+                answer = request.POST["answer"]
+                x.q_11_text = answer
+            except:
+                x.q_11_text = ''
+        else:
+            x.q_11_ill = False
+
+        meds = request.POST["meds"]
+
+        if(meds == "yes"):
+            x.q_11_meds = True
+            change = request.POST["change"]
+
+            if(change == "yes"):
+                x.q_11_change = True
+            else:
+                x.q_11_change = False
+        else:
+            x.q_11_meds = False
+
+        drugs = request.POST["drugs"]
+        
+        if(drugs == "yes"):
+            x.q_11_drugs = True
+        else:
+            x.q_11_drugs = False
+        
+        x.save()
+        return render(request, "questionaire/q12.html", {"auth_token": auth_token})
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q13(request, auth_token):
+    if request.method == "POST":
+
+        x = user_data.objects.get(auth_token=auth_token)
+
+        auth_token = str(uuid.uuid4())
+
+        time = request.POST["time"]
+        x.auth_token = auth_token
+        x.q_12_time = time
+
+        date = request.POST["date"]
+        x.q_12_when = date
+        x.save()
+        return render(request, "questionaire/q13.html", {"auth_token": auth_token})
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q14(request, auth_token):
+    if request.method == "POST":
+
+        x = user_data.objects.get(auth_token=auth_token)
+
+        auth_token = str(uuid.uuid4())
+
+        time = request.POST["time"]
+        x.auth_token = auth_token
+        x.q_13_time = time
+
+        num = request.POST["num"]
+        x.q_13_num = num
+        x.save()
+        return render(request, "questionaire/past.html", {"auth_token": auth_token})
+    return render(request, 'questionaire/forbidden.html')
+
+def q15(request, auth_token):
+    if request.method == "POST":
+        try:
             x = user_data.objects.get(auth_token=auth_token)
 
             auth_token = str(uuid.uuid4())
 
             time = request.POST["time"]
             x.auth_token = auth_token
-            x.q_11_time = time
-            
-            when = request.POST["when"]
-            x.q_11_when = when
-            done = request.POST["done"]
+            x.q_1_time_past = time
 
-            if(done == "yes"):
-                x.q_11_ill = True
+            try:
+                any = request.POST["any"]
+                x.q_1_any_past = True
                 try:
                     answer = request.POST["answer"]
-                    x.q_11_text = answer
+                    x.q_1_text_past = answer
                 except:
-                    x.q_11_text = ''
-            else:
-                x.q_11_ill = False
+                    x.q_1_text_past = ''
 
-            meds = request.POST["meds"]
+                options = request.POST["options"]
 
-            if(meds == "yes"):
-                x.q_11_meds = True
-                change = request.POST["change"]
-
-                if(change == "yes"):
-                    x.q_11_change = True
+                if (options == "yes"):
+                    x.q_1_lasted_past = True
+                    x.q_1_check_past = True
+                    x.save()
+                    return render(request, "questionaire/q2_past.html", {"result": 1, "auth_token": auth_token})
                 else:
-                    x.q_11_change = False
-            else:
-                x.q_11_meds = False
-
-            drugs = request.POST["drugs"]
-            
-            if(drugs == "yes"):
-                x.q_11_drugs = True
-            else:
-                x.q_11_drugs = False
-            
+                    x.q_1_lasted_past = False
+                    x.q_1_check_past = False
+                    x.save()
+                    return render(request, "questionaire/q2_past.html", {"result": 0, "auth_token": auth_token})
+            except:
+                x.q_1_any_past = False
+                x.q_1_check_past = False
+                x.save()
+                return render(request, "questionaire/q2_past.html", {"result": 0, "auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    else:
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+            auth_token = str(uuid.uuid4())
+            x.auth_token = auth_token
             x.save()
-            return render(request, "questionaire/past.html", {"auth_token": auth_token})
+            return render(request, "questionaire/q1_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+
+
+def q16(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_2_time_past = time
+
+            options = request.POST["options"]
+            if (x.q_1_check_past == True):
+                if (options == "yes"):
+                    x.q_2_any_plus_past = True
+                    try:
+                        answer = request.POST["answer"]
+                        x.q_2_text_plus_past = answer
+                    except:
+                        x.q_2_text_plus_past = ''
+
+
+                    x.q_2_check_past = True
+                    x.save()
+                    return render(request, "questionaire/count.html", {"auth_token": auth_token})
+                else:
+                    x.q_2_any_plus_past = False
+                    x.q_2_check_past = False
+                    x.save()
+                    return render(request, "questionaire/count.html", {"auth_token": auth_token})
+            else:
+                if (options == "yes"):
+                    x.q_2_any_minus_past = True
+                    try:
+                        answer = request.POST["answer"]
+                        x.q_2_text_minus_past = answer
+                    except:
+                        x.q_2_text_minus_past = ''
+
+                    x.q_2_check_past = True
+                    x.save()
+                    return render(request, "questionaire/count.html", {"auth_token": auth_token})
+                else:
+                    x.q_2_check_past = False
+                    x.result_past = False
+                    x.save()
+                    return render(request, "questionaire/report.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q17(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.qq_3_time_past = time
+
+            options = request.POST["options"]
+            if (options == "yes"):
+                x.qq_3_count_past = True
+                x.save()
+                return render(request, "questionaire/q3_past.html", {"auth_token": auth_token})
+            else:
+                x.qq_3_count_past = False
+                x.save()
+                return render(request, "questionaire/q3_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q18(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_3_time_past = time
+
+            options = request.POST["options"]
+            if (options == "yes"):
+                x.q_3_any_past = True
+
+                answer = request.POST["answer"]
+                x.q_3_weight_past = answer
+
+                lasted = request.POST["lasted"]
+
+                if (lasted == "yes"):
+                        x.q_3_voluntary_past = True
+                        x.q_3_check_past = False
+                        x.save()
+                        return render(request, "questionaire/q4_past.html", {"auth_token": auth_token})
+                else:
+                    x.q_3_voluntary_past = False
+                    x.q_3_check_past = True
+                    x.save()
+                    return render(request, "questionaire/q4_past.html", {"auth_token": auth_token})
+            else:
+                x.q_3_any_past = False
+                x.q_3_check_past = False
+                x.save()
+                return render(request, "questionaire/q4_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    else:
+        return render(request, 'questionaire/forbidden.html')
+
+
+def q19(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_4_time_past = time
+
+            try:
+                any = request.POST["any"]
+                x.q_4_any_past = True
+
+                x.q_4_current_past = request.POST["sleep1"]
+                x.q_4_past_past = request.POST["sleep2"]
+
+                lasted = request.POST["options"]
+
+                if (lasted == "yes"):
+                    x.q_4_lasted_past = True
+                    x.q_4_check_past = True
+                    x.save()
+                    return render(request, "questionaire/q5_past.html", {"auth_token": auth_token})
+                else:
+                    x.q_4_lasted_past = False
+                    x.q_4_check_past = False
+                    x.save()
+                    return render(request, "questionaire/q5_past.html", {"auth_token": auth_token})
+            except:
+                x.q_4_check_past = False
+                x.q_4_any_past = False
+                x.save()
+                return render(request, "questionaire/q5_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q20(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_5_time_past = time
+
+            try:
+                any = request.POST["any"]
+                x.q_5_any_past = True
+
+                notice = request.POST["notice"]
+                lasted = request.POST["options"]
+
+                if (notice == "yes"):
+                    x.q_5_notice_past = True
+                else:
+                    x.q_5_notice_past = False
+
+                if (lasted == "yes"):
+                    x.q_5_lasted_past = True
+                    x.q_5_check_past = True
+                    x.save()
+                    return render(request, "questionaire/q6_past.html", {"auth_token": auth_token})
+                else:
+                    x.q_5_lasted_past = False
+                    x.q_5_check_past = False
+                    x.save()
+                    return render(request, "questionaire/q6_past.html", {"auth_token": auth_token})
+            except:
+                x.q_5_any_past = False
+                x.q_5_check_past = False
+                x.save()
+                return render(request, "questionaire/q6_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q21(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_6_time_past = time
+
+            options = request.POST["options"]
+            if (options == "yes"):
+                x.q_6_check_past = True
+                x.save()
+                return render(request, "questionaire/q7_past.html", {"auth_token": auth_token})
+            else:
+                x.q_6_check_past = False
+                x.save()
+                return render(request, "questionaire/q7_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q22(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_7_time_past = time
+
+            try:
+                any = request.POST["any"]
+                x.q_7_any_past = True
+
+                options = request.POST["options"]
+                care = request.POST["care"]
+
+                if (care == "yes"):
+                    x.q_7_care_past = True
+                else:
+                    x.q_7_care_past = False
+
+                if (options == "yes"):
+                    x.q_7_lasted_past = True
+                    x.q_7_check_past = True
+                    x.save()
+                    return render(request, "questionaire/q8_past.html", {"auth_token": auth_token})
+                else:
+                    x.q_7_lasted_past = False
+                    x.q_7_check_past = False
+                    x.save()
+                    return render(request, "questionaire/q8_past.html", {"auth_token": auth_token})
+            except:
+                x.q_7_any_past = False
+                x.q_7_check_past = False
+                x.save()
+                return render(request, "questionaire/q8_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q23(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_8_time_past = time
+
+            options2 = request.POST["options2"]
+            options1 = request.POST["options1"]
+
+            if (options1 == "no" and options2 == "no"):
+                x.q_8_concentration_past = False
+                x.q_8_decisions_past = False
+                x.q_8_check_past = False
+                x.save()
+                return render(request, "questionaire/q9_past.html", {"auth_token": auth_token})
+
+            else:
+                if (options1 == "yes"):
+                    x.q_8_concentration_past = True
+                else:
+                    x.q_8_concentration_past = False
+
+                if (options2 == "yes"):
+                    x.q_8_decisions_past = True
+                else:
+                    x.q_8_decisions_past = False
+
+                try:
+                    answer = request.POST["answer"]
+                    x.q_8_text_past = answer
+                except:
+                    x.q_8_text_past = ''
+
+                lasted = request.POST["lasted"]
+
+                if (lasted == "yes"):
+                    x.q_8_lasted_past = True
+                    x.q_8_check_past = True
+                    x.save()
+                    return render(request, "questionaire/q9_past.html", {"auth_token": auth_token})
+                else:
+                    x.q_8_lasted_past = False
+                    x.q_8_check_past = False
+                    x.save()
+                    return render(request, "questionaire/q9_past.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+def q24(request, auth_token):
+    if request.method == "POST":
+        if(1):
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_9_time_past = time
+            if(1):
+                any = request.POST["any"]
+                x.q_9_any_past = True
+                done = request.POST["done"]
+                if(done == "yes"):
+                    x.q_9_done_past = True
+                    try:
+                        answer = request.POST["answer"]
+                        x.q_9_text_past = answer
+                    except:
+                        x.q_9_text_past = ''
+                    plan = request.POST["plan"]
+                    action = request.POST["action"]
+                    attempt = request.POST["attempt"]
+
+                    if(plan == "yes"):
+                        x.q_9_plan_past = True
+                    else:
+                        x.q_9_plan_past = False
+                    
+                    if(action == "yes"):
+                        x.q_9_action_past = True
+                    else:
+                        x.q_9_action_past = False
+                    
+                    if(attempt == "yes"):
+                        x.q_9_attempt_past = True
+                    else:
+                        x.q_9_attempt_past = False
+                    
+                else:
+                    x.q_9_done_past = False
+                
+                x.q_9_check_past = True
+            else:
+                x.q_9_any_past = False
+                x.q_9_check_past = False
+            l=[x.q_1_check_past,x.q_2_check_past,x.q_3_check_past,x.q_4_check_past,x.q_5_check_past,x.q_6_check_past,x.q_7_check_past,x.q_8_check_past,x.q_9_check_past]
+            x.q_count_past = l.count(True)
+            if(l.count(True)>=5):
+                x.save()
+                return render(request, "questionaire/q10_past.html", {"auth_token": auth_token})
+            else:
+                x.result_past = False
+                x.save()
+                return render(request, "questionaire/report.html", {"auth_token": auth_token})
+
+        else:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+def q25(request, auth_token):
+    if request.method == "POST":
+        try:
+            x = user_data.objects.get(auth_token=auth_token)
+
+            auth_token = str(uuid.uuid4())
+
+            time = request.POST["time"]
+            x.auth_token = auth_token
+            x.q_10_time_past = time
+
+            try:
+                any = request.POST["any"]
+                x.q_10_any_past = True
+                x.q_10_check_past = True
+                x.result_past = True
+                x.save()
+
+                return render(request, "questionaire/q11_past.html", {"auth_token": auth_token})
+            except:
+                x.q_10_any_past = False
+
+                done = request.POST["done"]
+
+                if (done == "yes"):
+                    x.q_10_other_past = True
+                    x.result_past = True
+                    x.save()
+                    return render(request, "questionaire/q11_past.html", {"auth_token": auth_token})
+                else:
+                    x.q_10_other_past = False
+                    try:
+                        answer = request.POST["answer"]
+                        x.q_10_text_past = answer
+                    except:
+                        x.q_10_text_past = ''
+                    x.result_past = False
+                    x.save()
+                    return render(request, "questionaire/report.html", {"auth_token": auth_token})
+        except:
+            return render(request, 'questionaire/forbidden.html')
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q26(request, auth_token):
+    if request.method == "POST":
+        x = user_data.objects.get(auth_token=auth_token)
+
+        auth_token = str(uuid.uuid4())
+
+        time = request.POST["time"]
+        x.auth_token = auth_token
+        x.q_11_time_past = time
+
+        when = request.POST["when"]
+        x.q_11_when_past = when
+        done = request.POST["done"]
+
+        if (done == "yes"):
+            x.q_11_ill_past = True
+            try:
+                answer = request.POST["answer"]
+                x.q_11_text_past = answer
+            except:
+                x.q_11_text_past = ''
+        else:
+            x.q_11_ill_past = False
+
+        meds = request.POST["meds"]
+
+        if (meds == "yes"):
+            x.q_11_meds_past = True
+            change = request.POST["change"]
+
+            if (change == "yes"):
+                x.q_11_change_past = True
+            else:
+                x.q_11_change_past = False
+        else:
+            x.q_11_meds_past = False
+
+        drugs = request.POST["drugs"]
+
+        if (drugs == "yes"):
+            x.q_11_drugs_past = True
+        else:
+            x.q_11_drugs_past = False
+
+        x.save()
+        return render(request, "questionaire/q12_past.html", {"auth_token": auth_token})
+    return render(request, 'questionaire/forbidden.html')
+
+
+def q27(request, auth_token):
+    if request.method == "POST":
+
+        x = user_data.objects.get(auth_token=auth_token)
+
+        auth_token = str(uuid.uuid4())
+
+        time = request.POST["time"]
+        x.auth_token = auth_token
+        x.q_12_time_past = time
+
+        date = request.POST["date"]
+        x.q_12_when_past = date
+        x.save()
+        return render(request, "questionaire/q13_past.html", {"auth_token": auth_token})
+    return render(request, 'questionaire/forbidden.html')
+
+def report(request, auth_token):
+    if request.method == "POST":
+
+        x = user_data.objects.get(auth_token=auth_token)
+
+        auth_token = str(uuid.uuid4())
+
+        time = request.POST["time"]
+        x.auth_token = auth_token
+        x.q_13_time_past = time
+
+        num = request.POST["num"]
+        x.q_13_num_past = num
+        x.save()
+        return render(request, "questionaire/report.html", {"auth_token": auth_token})
     return render(request, 'questionaire/forbidden.html')

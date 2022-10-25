@@ -38,26 +38,63 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
 </head>
 
 <body>
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
-        <a class="btn btn-primary" style="position: absolute; top: 0; right: 0; margin: 15px" href="../login">Exit
-            test</a>
+        <a class="btn btn-primary" style="position: absolute; top: 0; right: 0; margin: 15px" href="../login">Exit test</a>
         <div class="card" style="width: auto; margin: auto;" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body" style="font-size: 1.5rem">
-                <form action='../q13/{{auth_token}}' method='post' onsubmit='func1()'>
+                <form action='../q16/{{auth_token}}' method='post' onsubmit='func1()'>
                     {% csrf_token %}
                     <input name="time" class="form-check-input" type="hidden" value="" id="time">
+                    Did you experience the following almost everyday for a minimum of 2 weeks in the past:
                     <div class="container" style="padding-top: 1rem;">
-                        When did these symptoms start appearing?
-                        <div class="form-check form-group">
-                            <label for="date">mm/yy</label>
-                            <input type="month" class="form-control" id="date" min="1900-08" max="2025-12-31" name="date" required />
+                        <div id="+" style="display: none">
+                            During that time, did you have less interest or pleasure in things you usually enjoyed?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="yes" value="yes" onclick="opt1()" required>
+                                <label class="form-check-label" for="yess">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="no" value="no" onclick="opt2()" required>
+                                <label class="form-check-label" for="noo">
+                                    No
+                                </label>
+                            </div>
+                            <br>
+                            What has that been like?
+                            <div class="form-group">
+                                <input type="text" id="answer1" class="form-control form-control-lg" name="answer" disabled />
+                            </div>
                         </div>
+                        
+                        <div id="-" style="display: none">
+                            Did you lose interest or pleasure in things you usually enjoyed?
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="yes" value="yes" onclick="optn1()" required>
+                                <label class="form-check-label" for="yes">
+                                    Yes
+                                </label>
+                            </div>
+                        
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="options" id="no" value="no" onclick="optn2()" required>
+                                <label class="form-check-label" for="no">
+                                    No
+                                </label>
+                            </div>
+                            <br>
+                            What has that been like?
+                            <div class="form-group">
+                                <input type="text" id="answer2" class="form-control form-control-lg" name="answer" disabled />
+                            </div>
+                        </div>
+
                         <div class="text-center">
                             <input type="submit" id="myBtn" class="btn btn-primary">
                         </div>
@@ -79,6 +116,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
     <script>
+        let variable = "{{ result }}";
+        if(variable == "1")
+        {
+            document.getElementById("+").style.display = "inline" 
+        }
+        if (variable == "0")
+        {
+            document.getElementById("-").style.display = "inline"
+        }
+
         let startTime = new Date().getTime();
 
         function func1() {
@@ -86,6 +133,19 @@
             let totalTime = (endTime - startTime) / 1000;
             document.getElementById("time").value = totalTime
         }
+
+        function opt1() {
+            document.getElementById("answer1").disabled = false;
+        }
+        function optn1() {
+            document.getElementById("answer2").disabled = false;
+        }
+        function opt2() {
+            document.getElementById("answer1").disabled = true;
+        }
+        function optn2() {
+            document.getElementById("answer2").disabled = true;
+            }
     </script>
     <!-- Vendor JS Files -->
     <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
