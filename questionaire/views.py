@@ -11,8 +11,8 @@ from datetime import date
 def index(request):
     return render(request, 'questionaire/index.html')
 
-def demo(request):
-    return render(request, 'questionaire/q4.html')
+# def demo(request):
+#     return render(request, 'questionaire/q4.html')
 
 def register(request="GET"):
     if request.method == "POST":
