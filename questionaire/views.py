@@ -510,7 +510,7 @@ def q9(request, auth_token):
 
 def q10(request, auth_token):
     if request.method == "POST":
-        if(1):
+        try:
             x = user_data.objects.get(auth_token=auth_token)
 
             auth_token = str(uuid.uuid4())
@@ -518,7 +518,7 @@ def q10(request, auth_token):
             time = request.POST["time"]
             x.auth_token = auth_token
             x.q_9_time = time
-            if(1):
+            try:
                 any = request.POST["any"]
                 x.q_9_any = True
                 done = request.POST["done"]
@@ -552,7 +552,7 @@ def q10(request, auth_token):
                     x.q_9_done = False
                 
                 x.q_9_check = True
-            else:
+            except:
                 x.q_9_any = False
                 x.q_9_check = False
             l=[x.q_1_check,x.q_2_check,x.q_3_check,x.q_4_check,x.q_5_check,x.q_6_check,x.q_7_check,x.q_8_check,x.q_9_check]
@@ -565,7 +565,7 @@ def q10(request, auth_token):
                 x.save()
                 return render(request, "questionaire/past.html", {"auth_token": auth_token})
 
-        else:
+        except:
             return render(request, 'questionaire/forbidden.html')
     return render(request, 'questionaire/forbidden.html')
 
@@ -1072,7 +1072,7 @@ def q23(request, auth_token):
 
 def q24(request, auth_token):
     if request.method == "POST":
-        if(1):
+        try:
             x = user_data.objects.get(auth_token=auth_token)
 
             auth_token = str(uuid.uuid4())
@@ -1080,7 +1080,7 @@ def q24(request, auth_token):
             time = request.POST["time"]
             x.auth_token = auth_token
             x.q_9_time_past = time
-            if(1):
+            try:
                 any = request.POST["any"]
                 x.q_9_any_past = True
                 done = request.POST["done"]
@@ -1114,7 +1114,7 @@ def q24(request, auth_token):
                     x.q_9_done_past = False
                 
                 x.q_9_check_past = True
-            else:
+            except:
                 x.q_9_any_past = False
                 x.q_9_check_past = False
             l=[x.q_1_check_past,x.q_2_check_past,x.q_3_check_past,x.q_4_check_past,x.q_5_check_past,x.q_6_check_past,x.q_7_check_past,x.q_8_check_past,x.q_9_check_past]
@@ -1127,7 +1127,7 @@ def q24(request, auth_token):
                 x.save()
                 return render(request, "questionaire/report.html", {"auth_token": auth_token})
 
-        else:
+        except:
             return render(request, 'questionaire/forbidden.html')
     return render(request, 'questionaire/forbidden.html')
 
