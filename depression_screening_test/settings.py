@@ -23,10 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECRET_KEY = config("SECRET_KEY")  # this is to replace the secret key you cut away before
-SECRET_KEY = ")yq4cx)tttkk88ui@h!q%prvkh=qgpk#+o!7dtp)9xcyoj(1ln"
-
+SECRET_KEY = 'django-insecure-h*o_tw#-zoami8kaofn2t^648t6-0dk2mq6axxd@$(g58r6o@0'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*','https://mdd-diagnostic-test.herokuapp.com', '127.0.0.1']
 
@@ -150,4 +149,4 @@ EMAIL_PORT = 587
 # EMAIL_HOST_USER = config("EMAIL_HOST_USER")
 # EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_HOST_USER = "noreply.iitkgp@gmail.com"
-EMAIL_HOST_PASSWORD = "bsasgcdugrizdmgw"
+EMAIL_HOST_PASSWORD = "fvkxninjaplwzbiu"
